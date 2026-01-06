@@ -4,10 +4,10 @@ import Footer from "./components/Footer";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased">
         <Header />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
