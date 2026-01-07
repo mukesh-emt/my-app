@@ -37,7 +37,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
         {/* LOGO */}
-        <Link href="/">
+        <Link href="/" className="flex-shrink-0">
           <motion.h1 
             whileHover={{ scale: 1.05 }}
             className={`text-xl font-bold cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text ${
@@ -48,8 +48,8 @@ export default function Header() {
           </motion.h1>
         </Link>
 
-        {/* NAVIGATION */}
-        <nav className="space-x-6 hidden md:flex">
+        {/* NAVIGATION - CENTERED */}
+        <nav className="space-x-6 hidden md:flex absolute left-1/2 transform -translate-x-1/2">
           {["Home", "About", "Services", "Contact"].map((item) => (
             <Link 
               key={item}
@@ -75,7 +75,7 @@ export default function Header() {
           type="button"
           aria-label="Toggle navigation menu"
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className={`md:hidden text-2xl cursor-pointer rounded-md px-2 py-1 transition-colors ${
+          className={`md:hidden text-2xl cursor-pointer rounded-md px-2 py-1 transition-colors flex-shrink-0 ${
             isScrolled ? "text-slate-700 dark:text-slate-300" : "text-white"
           }`}
         >
