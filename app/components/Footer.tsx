@@ -3,12 +3,12 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white border-t border-white/10 mt-24">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
 
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-            MyApp
+            Mukesh Infotech
           </h2>
           <p className="mt-4 text-gray-400">
             Building modern digital experiences with speed, quality, and elegance.
@@ -47,7 +47,7 @@ export default function Footer() {
             📞 +91 98765 43210  
           </p>
           <p className="text-gray-300">
-            ✉ support@myapp.com  
+            ✉ support@mukeshinfotech.com  
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="border-t border-white/10 py-6">
         <p className="text-center text-gray-400 text-sm">
-          © {new Date().getFullYear()} MyApp. All rights reserved.
+          © {new Date().getFullYear()} Mukesh Infotech. All rights reserved.
         </p>
       </div>
     </footer>
