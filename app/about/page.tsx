@@ -12,7 +12,7 @@ export default function AboutPage() {
           <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <section className="py-24 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -70,7 +70,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="py-24 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

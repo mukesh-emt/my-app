@@ -1,19 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      if (window.scrollY > 20) setIsMenuOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setIsMenuOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -24,7 +35,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
         {/* LOGO */}
         <Link href="/">
           <motion.h1 
@@ -39,7 +50,7 @@ export default function Header() {
 
         {/* NAVIGATION */}
         <nav className="space-x-6 hidden md:flex">
-          {["Home", "About", "Services", "Contact"].map((item, index) => (
+          {["Home", "About", "Services", "Contact"].map((item) => (
             <Link 
               key={item}
               href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -60,12 +71,43 @@ export default function Header() {
         </nav>
 
         {/* MOBILE MENU ICON */}
-        <div className={`md:hidden text-2xl cursor-pointer ${
-          isScrolled ? "text-slate-700 dark:text-slate-300" : "text-white"
-        }`}>
-          ☰
-        </div>
+        <button
+          type="button"
+          aria-label="Toggle navigation menu"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className={`md:hidden text-2xl cursor-pointer rounded-md px-2 py-1 transition-colors ${
+            isScrolled ? "text-slate-700 dark:text-slate-300" : "text-white"
+          }`}
+        >
+          {isMenuOpen ? "✕" : "☰"}
+        </button>
       </div>
+
+      {/* MOBILE MENU */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 shadow-lg"
+          >
+            <div className="px-4 sm:px-6 py-4 space-y-3">
+              {["Home", "About", "Services", "Contact"].map((item) => (
+                <Link
+                  key={item}
+                  href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full rounded-lg px-4 py-3 text-base font-semibold text-slate-800 dark:text-slate-100 bg-slate-100/70 dark:bg-slate-800/70 hover:bg-slate-200/80 dark:hover:bg-slate-700/80 transition-colors"
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
