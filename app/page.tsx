@@ -76,11 +76,11 @@ export default function Page() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
-              Why Choose Us
+            <h2 className="text-3xl md:text-4xl font-semibold mb-3 text-slate-900 dark:text-white">
+              Why work with Mukesh Infotech
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-              Discover what makes us different
+            <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
+              Clear, reliable delivery with a focus on performance, design quality, and long‑term support.
             </p>
           </motion.div>
 
@@ -89,20 +89,14 @@ export default function Page() {
               {
                 title: "Lightning Fast",
                 description: "Built with performance in mind. Experience blazing fast load times and smooth interactions.",
-                icon: "⚡",
-                gradient: "from-yellow-400 to-orange-500"
               },
               {
                 title: "Modern Design",
                 description: "Beautiful, responsive designs that work seamlessly across all devices and screen sizes.",
-                icon: "🎨",
-                gradient: "from-pink-400 to-rose-500"
               },
               {
                 title: "Secure & Reliable",
                 description: "Enterprise-grade security and reliability. Your data is safe with us.",
-                icon: "🔒",
-                gradient: "from-blue-400 to-cyan-500"
               }
             ].map((feature, index) => (
               <motion.div
@@ -111,16 +105,16 @@ export default function Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-shadow"
+                whileHover={{ y: -4 }}
+                className="group p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-700 shadow-sm transition-colors transition-shadow text-left hover:bg-slate-50 hover:border-slate-300 dark:hover:bg-slate-800 dark:hover:border-slate-500 hover:shadow-md"
               >
-                <div className={`text-5xl mb-4 bg-gradient-to-r ${feature.gradient} text-transparent bg-clip-text`}>
-                  {feature.icon}
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white text-sm font-semibold dark:bg-slate-100 dark:text-slate-900 group-hover:bg-slate-800 group-hover:text-white dark:group-hover:bg-slate-200 dark:group-hover:text-slate-900 transition-colors">
+                  {index + 1}
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-slate-900 dark:text-white group-hover:text-slate-950 dark:group-hover:text-white">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed group-hover:text-slate-700 dark:group-hover:text-gray-300">
                   {feature.description}
                 </p>
               </motion.div>
