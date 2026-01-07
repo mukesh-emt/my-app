@@ -23,7 +23,7 @@ export default function Page() {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
-                My App
+                Mukesh Infotech
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">

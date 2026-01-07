@@ -22,7 +22,7 @@ export default function AboutPage() {
               About <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">Us</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Learn more about our mission, vision, and the team behind My App
+              Learn more about our mission, vision, and the team behind Mukesh Infotech
             </p>
           </motion.div>
         </div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                At My App, we're dedicated to creating exceptional digital experiences that 
+                At Mukesh Infotech, we're dedicated to creating exceptional digital experiences that 
                 empower businesses and individuals to achieve their goals. We believe in the 
                 power of technology to transform ideas into reality.
               </p>

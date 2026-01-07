@@ -180,8 +180,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">Email</h3>
                       <p className="text-gray-600 dark:text-gray-400">
-                        support@myapp.com<br />
-                        info@myapp.com
+                        support@mukeshinfotech.com<br />
+                        info@mukeshinfotech.com
                       </p>
                     </div>
                   </div>

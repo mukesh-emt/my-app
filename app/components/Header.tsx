@@ -28,11 +28,11 @@ export default function Header() {
   }, []);
 
   return (
-    <header 
+    <header
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg" 
-          : "bg-transparent"
+        isScrolled
+          ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg"
+          : "bg-slate-900/70 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
@@ -44,7 +44,7 @@ export default function Header() {
               isScrolled ? "" : "text-white"
             }`}
           >
-            My App
+            Mukesh Infotech
           </motion.h1>
         </Link>
 
