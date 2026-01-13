@@ -41,13 +41,13 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <p className="text-gray-300">
-            📍 New Delhi, India  
+            📍 Rourkela, India
           </p>
           <p className="text-gray-300">
-            📞 +91 98765 43210  
+            📞 +91 8327741483
           </p>
           <p className="text-gray-300">
-            ✉ support@mukeshinfotech.com  
+            ✉ mukeshsahurkl1@gmail.com
           </p>
         </div>
 
